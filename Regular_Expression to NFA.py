@@ -124,7 +124,7 @@ print(str1)
 stack=[]       #to push states in the stack
 def union(op,op2):
      
-     ''' for union  create 2 new states and add the transcation b/w those those states'''
+     ''' for union  create 2 new states and add the transcation b/w those  states'''
      news=Nfa()
      news.insert('Q'+str(j),'Q'+str(j+1))
      end=op.end
@@ -150,7 +150,7 @@ def union(op,op2):
      stack.append(news)  #push new state into the stack
         
 def concat(op2,op):
-     '''a news nfa of concatination  no new state is required  so don't insert data   a new nfa is created having initial state as op.satrt and final state as op2.end'''
+     '''a news nfa of concatination  no new state is required  so don't insert data .  A new nfa is created having initial state as op.satrt and final state as op2.end'''
      news=Nfa()    
      end=op.end
      end1=op2.end
@@ -175,7 +175,7 @@ def concat(op2,op):
      
 def star(op):
 
-     '''  in this create 2 new states AND  b/w thw initial of final state add all the transaction of op'''
+     '''  in this create 2 new states AND  b/w the initial and final state add all the transaction of op'''
      news=Nfa()
      news.insert('Q'+str(j),'Q'+str(j+1))
      
@@ -193,11 +193,10 @@ def star(op):
      #for i in news.transaction:
          #print(i)
      stack.append(news)   #push new state into the stack  
-     
-    
-     
-     
-     
+ 
+ 
+ 
+# here is we are creating the nfa chrachter by character  
 
 for i in range(0,len(str1)):
 
